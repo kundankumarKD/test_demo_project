@@ -102,7 +102,7 @@ app.post('/create-organization', async (req, res) => {
         res.send({ message: 'Organization created successfully' })
     } catch (error) {
         console.error(error)
-        res.status(400).send({ error: 'All fields are required' });
+        res.status(400).send({ error: 'Something went wrong' });
     }
 })
 
@@ -112,7 +112,7 @@ app.post('/create-contacts', async (req, res) => {
         await users.bulkCreate(contacts)
         res.send({ message: 'Organization created successfully' })
     } catch (error) {
-        res.status(400).send({ error: 'All fields are required' });
+        res.status(400).send({ error: 'Something went wrong' });
         console.error(error)
     }
 })
@@ -130,7 +130,7 @@ app.post('/update-contacts', async (req, res) => {
         res.send({ message: 'User created successfully' })
     } catch (error) {
         console.error(error)
-        res.status(400).send({ error: 'All fields are required' });
+        res.status(400).send({ error: 'Something went wrong' });
     }
 })
 
